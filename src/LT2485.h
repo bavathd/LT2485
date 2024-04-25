@@ -4,7 +4,7 @@
 #include "Arduino.h"
 #include <Wire.h>
 
-#define LT2485_I2C_GlOBAL_ADDRESS 0x48
+#define LT2485_I2C_GlOBAL_ADDRESS 0x15
 
 #define LT2485_SPEED_1X 0x00
 #define LT2485_SPEED_2X 0x01
