@@ -17,7 +17,7 @@
  // Select speed mode
  #define SLOW   0b00000000 // slow output rate with autozero
  #define FAST   0b00000001 // fast output rate with no autozero
-
+ 
 
 LT2485 s1;
 void setup() {
