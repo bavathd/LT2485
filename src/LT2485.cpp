@@ -27,11 +27,11 @@ bool LT2485::setup(TwoWire &wirePort, uint8_t deviceAddress) {
 
 
 int32_t LT2485::readData(uint8_t address, uint8_t config) {
-    _i2cPort->beginTransmission(_deviceAddress);
+    _i2cPort->beginTransmission(_deviceAddress|WRITE);
     _i2cPort->write(config);
     _i2cPort->endTransmission();
 
-    _i2cPort->requestFrom(static_cast<uint8_t>(address), static_cast<uint8_t>(4));
+    _i2cPort->requestFrom(static_cast<uint8_t>(address|READ), static_cast<uint8_t>(4));
     adc_code.by.d4 = _i2cPort->read();
     adc_code.by.d3 = _i2cPort->read();
     adc_code.by.d2 = _i2cPort->read();

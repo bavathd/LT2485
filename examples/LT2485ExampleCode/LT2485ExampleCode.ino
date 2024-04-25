@@ -1,4 +1,5 @@
 #include <LT2485.h>
+
 #define GAIN1  0b00000000   // G = 1   (SPD = 0), G = 1   (SPD = 1)
  #define GAIN2  0b00100000   // G = 4   (SPD = 0), G = 2   (SPD = 1)
  #define GAIN3  0b01000000   // G = 8   (SPD = 0), G = 4   (SPD = 1)
@@ -17,7 +18,7 @@
  // Select speed mode
  #define SLOW   0b00000000 // slow output rate with autozero
  #define FAST   0b00000001 // fast output rate with no autozero
- 
+
 
 LT2485 s1;
 void setup() {
