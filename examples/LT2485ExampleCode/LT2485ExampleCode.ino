@@ -29,5 +29,5 @@ void setup() {
 void loop() {
 int32_t x, y;
   // put your main code here, to run repeatedly:
-  x = s1.readData(0x48,  VIN | R50 |SLOW );
+  x = s1.readData(0x15,  VIN | R50 |SLOW );
 }
